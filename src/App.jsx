@@ -7,7 +7,7 @@ import About from "./pages/about";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import useFadeInEffect from "./utils/scroll";
-import BackgroundX from "./components/BackgroundX";
+import BackgroundX from "./components/backgroundX";
 
 
 function App() {
