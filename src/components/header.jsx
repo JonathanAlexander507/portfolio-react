@@ -25,6 +25,9 @@ const Header = () => {
             <button onClick={() => scrollToSection("about")}>Sobre Mí</button>
           </li>
           <li>
+            <button onClick={() => scrollToSection("skills")}>Habilidades</button>
+          </li>
+          <li>
             <button onClick={() => scrollToSection("project")}>
               Mis Proyectos
             </button>

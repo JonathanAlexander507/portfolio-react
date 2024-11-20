@@ -19,6 +19,12 @@ const Home = () => {
         <button onClick={() => scrollToSection("projects")} className="btn">
           Ver Mis Proyectos
         </button>
+        <button
+      onClick={() => window.open("/cv.pdf", "_blank")}
+      className="btn"
+    >
+      Ver mi CV
+    </button>
       </div>
     </section>
   );

@@ -1,24 +1,9 @@
 import React from "react";
 
 const About = () => {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Nodejs",
-    "ExpressJs",
-    "MySQL",
-    "React",
-    "ViteJs",
-    "Bootstrap",
-    "GitHub",
-    "ChatGPT",
-    "Blender",
-  ];
-
-  return (
+return (
     <section id="about" className="fade-in">
-      <h2>Sobre Mí</h2>
+      <h2 className="about_title">Sobre Mí</h2>
       <p id="parrafo_about">
         "¡Hola! Soy un apasionado de la programación web, especializado en el
         desarrollo de aplicaciones utilizando herramientas modernas como React,
@@ -32,20 +17,6 @@ const About = () => {
         profesional, manteniendo un ambiente de colaboración positivo y
         efectivo."
       </p>
-      <h3>Habilidades:</h3>
-      <ul className="skills">
-        {skills.map((skill, index) => (
-          <li key={index}>
-            <div className="skill-box">
-              <img
-                src={`/images/logos/${skill.toLowerCase()}.svg`}
-                alt={skill}
-              />
-              <p>{skill}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 };
