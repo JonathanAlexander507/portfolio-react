@@ -165,12 +165,15 @@ body {
 }
 
 .profile-pic {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 5px solid var(--red-neon);
-  transition: transform 1s ease;
+  width: 100%; /* La imagen ocupará el ancho completo de su contenedor */
+  max-width: 200px; /* Limita el tamaño máximo */
+  height: auto; /* Mantiene las proporciones */
+  border-radius: 50%; /* Hace la imagen circular */
+  border: 5px solid var(--red-neon); /* Borde estilizado */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+  display: block; /* Asegura que se comporte como un bloque */
 }
+
 
 .profile-pic:hover {
   transform: scale(1.1);
@@ -380,7 +383,6 @@ button:hover, .btn:hover {
       text-align: center;
       padding: 0.5rem 0;
     }
-    @media (max-width: 768px) {
       /* Inicio */
       #home {
         flex-direction: column;
@@ -388,7 +390,8 @@ button:hover, .btn:hover {
       }
     
       .profile-pic {
-        width: 150px;
+        max-width: 150px; /* Reduce el tamaño máximo en pantallas pequeñas */
+        border-width: 3px; /* Ajusta el grosor del borde */
       }
     
       .home-text h1 {
@@ -409,5 +412,4 @@ button:hover, .btn:hover {
       .contact-icons a {
         font-size: 2.5rem;
       }
-    }
-  }    
+}
