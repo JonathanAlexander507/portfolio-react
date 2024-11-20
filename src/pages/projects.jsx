@@ -42,7 +42,7 @@ const Projects = () => {
       title: "Game Store Dashboard",
       description:
         "Diseño y desarrollo de un Dashboard con react para el E-commerce del proyecto fullstack que desarrolle llamado Game Store 507",
-      previewImage: "/images/previews/game_store_dashboard_preview",
+      previewImage: "/images/previews/game_store_dashboard_preview.png",
       projectLink: "https://proyectogamestore507.vercel.app/",
       githubLink:
         "https://github.com/JonathanAlexander507/DPFS_Jonathan_Brown.git",
