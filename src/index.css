@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Botón hamburguesa */
+  .hamburger {
+    display: none; /* Escondido en pantallas grandes */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Menú general */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  :root {
+    --background-dark: #0d0d0d; /* Negro profundo */
+    --background-trans:#0d0d0d70;
+    --red-neon: #ff073a; /* Rojo neón */
+    --gray-light: #b3b3b3; /* Gris claro */
+    --text-light: #f5f5f5; /* Blanco suave */
+  }
+  
+  /* Header */
+.header {
+  color: var(--background-trans);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: space-between; /* Espacia logo y menú */
+  padding: 0.5rem 1rem; /* Ajusta el padding */
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.header nav ul li button {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--gray-light);
+  background-color: transparent;
+}
+
+.header nav ul li button:hover {
+  color: var(--red-neon);
+}
+
+/* Logo */
+.logo img {
+  width: 120px; /* Ajuste del logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+  /* General */
+/* Fondo animado */
+body {
+  background-color: #0d0d0d; /* Fondo negro base */
+  position: relative;
+  overflow: auto; /* Evita que los elementos se desborden */
+  color: var(--gray-light);
+}
+
+/* Contenedor para las "X" */
+.x-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Detrás de todo el contenido */
+  pointer-events: none; /* Evita la interacción */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilo base de las "X" */
+.x {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem; /* Tamaño inicial */
+  color: rgba(255, 7, 58, 0.3); /* Rojo translúcido */
+  animation: xPulse 3s infinite ease-in-out;
+  position: absolute;
+  opacity: 0.8;
+}
+
+
+/* Variantes de tamaño */
+.x.small {
+  font-size: 4rem;
+}
+
+.x.large {
+  font-size: 8rem;
+}
+
+/* Animación de crecimiento y reducción */
+@keyframes xPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4); /* Crece un poco */
+    opacity: 1; /* Más visible */
+  }
+}
+
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--red-neon);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1.5rem; /* Separación debajo de los párrafos */
+    line-height: 1.6; /* Mejora la legibilidad */
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--red-neon);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+/* Diseño del Home */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.profile-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid var(--red-neon);
+  transition: transform 1s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.home-text {
+  flex: 2;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Botones generales */
+button, .btn {
+  background-color: var(--red-neon);
+  color: var(--background-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-3px);
+  background-color: #c52a49;
+}
+
+/* Ajustes en Habilidades */
+#about {
+  padding: 4rem 0;
+  text-align: center;
+}
+#parrafo_about {
+  padding: 0 4rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.skills li {
+  width: 120px; /* Tamaño ajustado */
+  text-align: center;
+  background: var(--background-trans);
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--red-neon);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px var(--red-neon);
+}
+
+.skills li img {
+  width: 80px; /* Tamaño del ícono */
+  height: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.skills li p {
+  color: var(--text-light);
+}
+#projects {
+  padding: 4rem 2rem;
+}
+
+.project-card {
+  background-color:  var(--background-trans);
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--red-neon);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px; /* Ancho máximo ajustado */
+  margin: 0 auto; /* Centrar en contenedor */
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptable */
+  gap: 2rem; /* Espaciado entre tarjetas */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px var(--red-neon);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-buttons .btn {
+  background-color: var(--red-neon);
+  color: var(--background-dark);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem; /* Tamaño reducido */
+  font-size: 0.9rem; /* Fuente más pequeña */
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 120px; /* Ancho fijo para uniformidad */
+}
+
+.project-buttons .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--red-neon);
+}
+
+#contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-icons a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: var(--red-neon);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: white;
+}
+.footer {
+  color: var(--background-trans);
+  backdrop-filter: blur(5px);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 2px solid var(--red-neon);
+}
+
+.footer-logo img {
+  width: 120px; /* Tamaño ajustado */
+  height: auto;
+}
+
+.footer p {
+  font-size: 0.875rem;
+  color: var(--gray-light);
+  margin-top: 1rem;
+}
+
+ 
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Muestra el botón hamburguesa */
+    }
+  
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #1a202c; /* Mismo color que el header */
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transform: translateY(-200%);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  
+    .menu.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    .menu li {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+    @media (max-width: 768px) {
+      /* Inicio */
+      #home {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .profile-pic {
+        width: 150px;
+      }
+    
+      .home-text h1 {
+        font-size: 2rem;
+      }
+    
+      /* Proyectos */
+      .project-card {
+        width: 100%;
+      }
+    
+      /* Habilidades */
+      .skills li {
+        width: 100%;
+      }
+    
+      /* Contacto */
+      .contact-icons a {
+        font-size: 2.5rem;
+      }
+    }
+  }    
