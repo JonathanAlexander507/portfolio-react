@@ -3,6 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+  width: 15px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d; /* Fondo oscuro */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff073a, #1a1a1a); /* Degradado rojo y negro */
+  border-radius: 10px;
+  border: 2px solid #0d0d0d; /* Espacio entre el scroll y el track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff073a; /* Rojo sólido al hacer hover */
+  box-shadow: 0 0 10px #ff073a; /* Efecto brillante */
+}
 
 /* Botón hamburguesa */
   .hamburger {
