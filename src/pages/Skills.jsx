@@ -14,6 +14,7 @@ const Skills = () => {
     "GitHub",
     "ChatGPT",
     "Blender",
+    "Photoshop",
   ];
 
   return (
